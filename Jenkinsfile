@@ -3,7 +3,7 @@ pipeline {
     agent { label 'slave-1' }   // run on the docker-enabled worker node
 
     environment {
-        DOCKERHUB_USER = 'satyajitpawar'
+        DOCKERHUB_USER = 'sris1582'
         IMAGE_REPO     = 'docker_jenkins'
         IMAGE_TAG      = 'latest'
         CONTAINER_NAME = 'myhttpd'
@@ -20,7 +20,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/Satyajit-Pawar/docker_jenkins.git'
+                    url: 'https://github.com/sris150682/docker_jenkins.git'
             }
         }
 
